@@ -1,0 +1,21 @@
+{
+    "gopls": {
+        "build.buildFlags": ["-tags=tools"],
+        "formatting.gofumpt": true,
+        "verboseOutput": true,
+    },
+    "go.formatTool": "golines",
+    "go.formatFlags": [
+        "--base-formatter=gofumpt",
+    ],
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+    "go.alternateTools": {
+        "golangci-lint": "${workspaceFolder}/tools/bin/golangci-lint",
+        "gofumpt": "${workspaceFolder}/tools/bin/gofumpt",
+        "golines": "${workspaceFolder}/tools/bin/golines",
+        "goimports": "${workspaceFolder}/tools/bin/goimports",
+    },
+    "go.logging.level": "verbose"
+}
