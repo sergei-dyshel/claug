@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "./api";
+
+service Service {
+  rpc Ping (Empty) returns (Empty) {}
+  rpc Exit (Empty) returns (Empty) {}
+  rpc PressEnter (Empty) returns (Empty) {}
+}
+
+message Empty {}

@@ -2,20 +2,31 @@
     "gopls": {
         "build.buildFlags": ["-tags=tools"],
         "formatting.gofumpt": true,
-        "verboseOutput": true,
+        "verboseOutput": true
     },
     "go.formatTool": "golines",
-    "go.formatFlags": [
-        "--base-formatter=gofumpt",
-    ],
+    "go.formatFlags": ["--base-formatter=gofumpt"],
     "[go]": {
         "editor.formatOnSave": true
     },
-    "go.alternateTools": {
-        "golangci-lint": "${workspaceFolder}/tools/bin/golangci-lint",
-        "gofumpt": "${workspaceFolder}/tools/bin/gofumpt",
-        "golines": "${workspaceFolder}/tools/bin/golines",
-        "goimports": "${workspaceFolder}/tools/bin/goimports",
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "go.logging.level": "verbose"
+    "[yaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.logging.level": "verbose",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": ["--fast"],
+    "json.schemas": [
+        {
+            "fileMatch": ["*.claug.json"],
+            "url": "./config.schema.json"
+        }
+    ],
+    "yaml.schemas": {
+        "./config.schema.json": ["*.claug.yml", "*.claug.yaml"]
+    }
 }

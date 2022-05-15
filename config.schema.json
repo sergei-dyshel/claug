@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "config",
+    "description": "Claug configuration",
+    "type": "object",
+    "properties": {
+        "interpreters": {
+            "description": "Supported interpreters",
+            "type": "array",
+            "items": {
+                "title": "interpreter",
+                "type": "object",
+                "description": "Configuration of interpreter",
+                "required": ["name"],
+                "properties": {
+                    "name": {
+                        "description": "Name of interpreter",
+                        "type": "string",
+                        "pattern": ".*"
+                    },
+                    "patterns": {
+                        "description": "List of regex patterns for prompt",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+interpreters:
+    - name: shell
+      patterns:
+          - "\$ "
